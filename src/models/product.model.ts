@@ -8,6 +8,7 @@ interface Product {
     stock: number;
     images?: string[]; 
     createdAt: Date;
+    salesCount:number;
 }
 
 const ProductSchema = new Schema<Product>({
@@ -18,6 +19,7 @@ const ProductSchema = new Schema<Product>({
     stock: { type: Number, required: true, default: 0 },
     images: { type: [String], default: [] },
     createdAt: { type: Date, default: Date.now },
+    salesCount: { type: Number, default: 0 }, // New field to track sales count
 });
 
 const Product = mongoose.model<Product>("Product", ProductSchema);

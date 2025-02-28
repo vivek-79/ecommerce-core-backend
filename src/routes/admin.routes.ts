@@ -25,5 +25,11 @@ adminRoutes.route('/products/update').put(updateProduct);
 adminRoutes.route('/products/delete').delete(deleteProduct);
 adminRoutes.route('/products/list').get(listProducts);
 
+//sales-report
+adminRoutes.route('/sales/category-wise').get(addProduct);
+adminRoutes.route('/sales/top-products').put(updateProduct);
+adminRoutes.route('/sales/worst-products').delete(deleteProduct);
+
+
 
 export default adminRoutes;
